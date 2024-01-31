@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Homepage</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 3%;
+            padding: 2%;
+        }
+
+        /*header {
+           
+            color: #fff;
+            padding: 10px;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }*/
+
+        header{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        section{
+            background-color: #fff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Wizard theme colors */
+        section {
+            background-color: #fff;
+            color: #333;
+        }
+
+        body {
+            background-color: #f7f7f7;
+        }
+
+        table {
+            background-color: #fff;
+        }
+
+        th, td {
+            border-color: #ddd;
+        }
+
+        a {
+            color: #3498db;
+        }
+
+        a:hover {
+            color: #1c87c9;
+        }
+
+        /* Positioning adjustments */
+        #add-project-link {
+            text-align: right;
+        }
+
+        #select-catogery{
+            text-align: right;
+        }
+
+        p{
+            font-size: 120%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Sign Out link in the top left -->
+    
+    <!-- Part 1: Welcome Note -->
+        <header>
+            <p id="sign-out-link"><a href="#systemhomepage">Sign Out</a></p>
+        </header>
+
+        <h1>Welcome, (Clients's First Name!)</h1>
+    
+    
+    <!-- Part 2: Client's Information -->
+    <section>
+        <h2>Your Information</h2>
+        <!-- Display clients information retrieved from the database -->
+        <p>First Name: client's Name</p>
+        <p>Last Name: client's Name</p>
+        <p>Email: client's Email</p>
+        <!-- Add other information as needed -->
+    </section>
+
+
+    <!-- Part 3: Table of all available Designers -->
+    <section>
+    <div id="designers">
+
+        <!-- catogery selection filter -->
+        <div id="select-catogery">
+        <p>Select Catogery:
+        <select id="category-filter">
+            <option value="all">All Categories</option>
+            <option value="modern">Modern</option>
+            <option value="Coastal">Coastal</option>
+            <option value="Minimalist">Minimalist</option>
+            <!-- Add options for filtering -->
+        </select>
+        <button id="filter-button">Filter</button>
+        </p>
+        </div>
+
+        <h2>Interior Designers</h2>
+        <!-- Table of designers -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Designer</th>
+                    <th>Speciality</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="NVDesignportfolio.html"><img src="logo1.png" alt="NV Design logo" width="100" height="100"><br> NV Design</a></td>
+                    <td>Modern</td>
+                    <td><a href="requestdesignconsultationpage.html">Request design consulation</a></td>                  
+                </tr>
+                <tr>
+                    <td><a href="Interiors.html"><img src="logo2.jpg" alt="Interiors logo" width="100" height="100"> <br> Interiors </a></td>
+                    <td>Coastal</td>
+                    <td><a href="requestdesignconsultationpage.html">Request design consulation</a></td>                  
+                </tr>
+                <tr>
+                    <td><a href="TinaMarie.html"><img src="logo3.jpg" alt=" Tina Marie logo" width="100" height="100"> <br> Tina Marie </a></td>
+                    <td>Minimalist</td>
+                    <td><a href="requestdesignconsultationpage.html">Request design consulation</a></td>                  
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- Part 4: Previous Design Consultation Requests -->
+ <section>
+    <div id="consultation-requests">
+        <h2>Previous Design Consultation Requests</h2>
+
+    <!-- Table of previous consultation requests -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Designer</th>
+                    <th>Room</th>
+                    <th>Dimensions</th>
+                    <th>Design Category</th>
+                    <th>Color Preferences</th>
+                    <th>Request Date</th>
+                    <th>Design Consultation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="NVDesign.html"><img src="logo1.png" alt="NV Design logo" width="100" height="100"><br> NV Design</a></td>
+                    <td>Living Room</td>
+                    <td>4x5m</td>
+                    <td>Modern</td>
+                    <td>Beige and Green</td>
+                    <td>9/1/2024</td>
+                    <td>Pending consulation</td>
+                </tr>
+                <tr>
+                    <td><a href="Interiors.html"><img src="logo2.jpg" alt="Interiors logo" width="100" height="100"> <br> Interiors </a></td>
+                    <td>Bedroom</td>
+                    <td>3x4m</td>
+                    <td>Coastal</td>
+                    <td>Blue and White</td>
+                    <td>7/1/2024</td>
+                    <td>consulation Image</td>
+                </tr>                <tr>
+                    <td><a href="TinaMarie.html"><img src="logo3.jpg" alt=" Tina Marie logo" width="100" height="100"> <br> Tina Marie </a></td>
+                    <td>Kitchen</td>
+                    <td>3x3m</td>
+                    <td>Minimalist</td>
+                    <td>Black and White</td>
+                    <td>5/1/2024</td>
+                    <td>Consulation Declined</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+</body>
+</html>
