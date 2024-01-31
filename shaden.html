@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client Homepage</title>
+</head>
+<body>
+    <div id="welcome">
+        <h1>Welcome [Client's First Name]</h1>
+    </div>
+
+    <div id="sign-out">
+        <a href="homepage.html">Sign Out</a>
+    </div>
+
+    <div id="client-info">
+        <h2>Your Information:</h2>
+        <p>First Name: [Client's First Name]</p>
+        <p>Last Name: [Client's Last Name]</p>
+        <p>Email Address: [Client's Email Address]</p>
+    </div>
+
+    <div id="designers">
+        <h2>Interior Designers</h2>
+        <select id="category-filter">
+            <option value="all">All Categories</option>
+            <!-- Add options for filtering -->
+        </select>
+        <button id="filter-button">Filter</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Designer</th>
+                    <th>Speciality</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="designportfoliopage.html">Logo and brand name</a></td>                  
+                    <td>Modern</td>
+                    <td><a href="requestdesignconsultationpage.html">Request design consulation</a></td>                  
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="consultation-requests">
+        <h2>Previous Design Consultation Requests</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Designer</th>
+                    <th>Room</th>
+                    <th>Dimensions</th>
+                    <th>Design Category</th>
+                    <th>Color Preferences</th>
+                    <th>Request Date</th>
+                    <th>Design Consultation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>logo</td>
+                    <td>Living Room</td>
+                    <td>4x5m</td>
+                    <td>Modern</td>
+                    <td>Beige and Green</td>
+                    <td>9/1/2024</td>
+                    <td>Pending consulation</td>
+                </tr>
+                <tr>
+                    <td>logo</td>
+                    <td>Bedroom</td>
+                    <td>3x4m</td>
+                    <td>Coastal</td>
+                    <td>Blue and White</td>
+                    <td>7/1/2024</td>
+                    <td>consulation Image</td>
+                </tr>                <tr>
+                    <td>logo</td>
+                    <td>Kitchen</td>
+                    <td>3x3m</td>
+                    <td>Minimalist</td>
+                    <td>Black and White</td>
+                    <td>5/1/2024</td>
+                    <td>Consulation Declined</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
