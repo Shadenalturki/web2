@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer Homepage</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 3%;
+            padding: 2%;
+        }
+
+        /*header {
+           
+            color: #fff;
+            padding: 10px;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }*/
+
+        header{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        section {
+            background-color: #fff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Wizard theme colors */
+        section {
+            background-color: #fff;
+            color: #333;
+        }
+
+        body {
+            background-color: #f7f7f7;
+        }
+
+        table {
+            background-color: #fff;
+        }
+
+        th, td {
+            border-color: #ddd;
+        }
+
+        a {
+            color: #3498db;
+        }
+
+        a:hover {
+            color: #1c87c9;
+        }
+
+        /* Positioning adjustments */
+        #add-project-link {
+            text-align: right;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Sign Out link in the top left -->
+
+
+<!-- Part 1: Welcome Note -->
+
+
+    <header>
+        <p id="sign-out-link"><a href="#systemhomepage">Sign Out</a></p>
+    </header>
+
+
+    <h1>Welcome, (Designer's First Name!)</h1>
+
+
+<!-- Part 2: Designer Information -->
+<section>
+    <h2>Your Information</h2>
+    <!-- Display designer information retrieved from the database -->
+    <p>Name: Designer's Name</p>
+    <p>Email: Designer's Email</p>
+    <!-- Add other information as needed -->
+</section>
+
+ 
+<!-- Part 3: Design Portfolio -->
+<section>
+
+<!-- Link to add a new project -->
+<p id="add-project-link"><a href="AddProject.html">Add a New Project</a></p>
+
+
+    <h2>Design Portfolio</h2>
+    <!-- Table of past projects -->
+    <table>
+        <thead>
+            <tr>
+                <th>Project Name</th>
+                <th>Image</th>
+                <th>Category</th>
+                <th>Description</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Populate this section dynamically with data from the database -->
+            <!-- Example row -->
+            <tr>
+                <td>Project 1</td>
+                <td><img src="project1.jpg" alt="Project 1"></td>
+                <td>Category 1</td>
+                <td>Description of Project 1</td>
+                <td><a href="UpdProject.html">Edit</a></td>
+                <td><a href="#">Delete</a></td>
+            </tr>
+            <!-- Repeat this structure for each project -->
+        </tbody>
+    </table>
+
+   </section>
+
+<!-- Part 4: Design Consultation Requests -->
+<section>
+    <h2>Design Consultation Requests</h2>
+    <!-- Table of consultation requests -->
+    <table>
+        <thead>
+            <tr>
+                <th>Client Name</th>
+                <th>Room Type</th>
+                <th>Room Dimensions</th>
+                <th>Design Category</th>
+                <th>Color Preferences</th>
+                <th>Date of Request</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Populate this section dynamically with data from the database -->
+            <!-- Example row -->
+            <tr>
+                <td>Client 1</td>
+                <td>Living Room</td>
+                <td>10x12 ft</td>
+                <td>Category A</td>
+                <td>Blue, Green</td>
+                <td>2024-01-28</td>
+                <td><a href="#">Provide</a></td>
+                <td><a href="#">Decline</a></td>
+            </tr>
+            <!-- Repeat this structure for each request -->
+        </tbody>
+    </table>
+</section>
+
+<!-- Your JavaScript code here -->
+
+</body>
+
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Function to toggle visibility of an element
+        function toggleVisibility(elementId) {
+            var element = document.getElementById(elementId);
+            element.classList.toggle("hidden");
+        }
+
+        // Edit and Delete Project Links
+        var editProjectLinks = document.querySelectorAll('.edit-project-link');
+        var deleteProjectLinks = document.querySelectorAll('.delete-project-link');
+
+        editProjectLinks.forEach(function (link) {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                // Add logic to handle edit project link
+                alert('Edit project clicked!');
+            });
+        });
+
+        deleteProjectLinks.forEach(function (link) {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                // Add logic to handle delete project link
+                alert('Delete project clicked!');
+            });
+        });
+
+        // Provide Consultation and Decline Links
+        var provideConsultationLinks = document.querySelectorAll('.provide-consultation-link');
+        var declineLinks = document.querySelectorAll('.decline-link');
+
+        provideConsultationLinks.forEach(function (link) {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                // Add logic to handle provide consultation link
+                alert('Provide consultation clicked!');
+            });
+        });
+
+        declineLinks.forEach(function (link) {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                // Add logic to handle decline link
+                alert('Decline clicked!');
+            });
+        });
+
+        // Sign Out Link
+        var signOutLink = document.getElementById('sign-out-link');
+        signOutLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            // Add logic to handle sign out link
+            alert('Signing out!');
+        });
+    });
+</script>
+
+
+</html>
