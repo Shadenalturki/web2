@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Login</h1>
+
+    <form id="loginForm" onsubmit="login(event)">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password">
+        
+        <label>
+            <input type="radio" name="userType" value="designer" onclick="showForm()"> Designer
+        </label>
+    
+        <label>
+            <input type="radio" name="userType" value="client" onclick="showForm()"> Client
+        </label>
+
+        <button type="submit">Log In</button>
+    </form>
+
+    <script>
+        function login(event) {
+            event.preventDefault(); // Prevents the form from submitting and refreshing the page
+
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var userType = document.getElementById("userType").value;
+
+            // Simulate successful login without actual validation
+            alert("Redirecting...");
+
+            // Add logic to redirect to the respective homepage based on userType
+            if (userType === "designer") {
+                //لا تنسين نضيف لينك Redirect to designer's homepage
+            } else if (userType === "client") {
+                // لا تنسين نضيف لينك Redirect to client's homepage
+            }
+        }
+    </script>
+</body>
+</html>
